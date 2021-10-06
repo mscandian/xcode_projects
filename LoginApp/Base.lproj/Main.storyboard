@@ -1,24 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZcS-yf-gHW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t11-wa-tTF">
+                                <rect key="frame" x="16" y="128" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n64-ph-T2a">
+                                <rect key="frame" x="16" y="194" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHv-Tm-Pj4">
+                                <rect key="frame" x="164" y="260" width="86" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="doLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AV2-hd-X19"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n64-ph-T2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FO7-O6-VKw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t11-wa-tTF" secondAttribute="trailing" constant="16" id="FzJ-Re-I9N"/>
+                            <constraint firstItem="t11-wa-tTF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wr9-su-1R7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n64-ph-T2a" secondAttribute="trailing" constant="16" id="aXh-em-zLj"/>
+                            <constraint firstItem="XHv-Tm-Pj4" firstAttribute="top" secondItem="n64-ph-T2a" secondAttribute="bottom" constant="32" id="dfJ-Fg-Zpj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XHv-Tm-Pj4" secondAttribute="trailing" constant="164" id="ehe-73-DN2"/>
+                            <constraint firstItem="XHv-Tm-Pj4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="hPW-kd-OAQ"/>
+                            <constraint firstItem="n64-ph-T2a" firstAttribute="top" secondItem="t11-wa-tTF" secondAttribute="bottom" constant="32" id="lPc-J6-pDi"/>
+                            <constraint firstItem="t11-wa-tTF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="y1k-0N-NkH"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6kL-ZA-6x9"/>
+                    <connections>
+                        <outlet property="loginEditTxt" destination="t11-wa-tTF" id="o1w-qw-1we"/>
+                        <outlet property="pwdEditTxt" destination="n64-ph-T2a" id="RDo-b3-Ydr"/>
+                        <segue destination="eJ9-LR-j7o" kind="show" identifier="loginSegue" id="PSH-ER-ecQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="821.73913043478262" y="-274.55357142857139"/>
+        </scene>
+        <!--Second Screen-->
+        <scene sceneID="NnM-9q-0BS">
+            <objects>
+                <viewController id="eJ9-LR-j7o" customClass="SecondScreen" customModule="LoginApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRW-8A-ozw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmD-6m-0gl">
+                                <rect key="frame" x="131" y="128" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7n-Aw-2Ej">
+                                <rect key="frame" x="131" y="213" width="152" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="doLogout:" destination="eJ9-LR-j7o" eventType="touchUpInside" id="Zmx-G5-LYx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Sf4-sL-VW3"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="z7n-Aw-2Ej" firstAttribute="leading" secondItem="Sf4-sL-VW3" secondAttribute="leading" constant="131" id="ZJc-lz-baB"/>
+                            <constraint firstItem="kmD-6m-0gl" firstAttribute="leading" secondItem="Sf4-sL-VW3" secondAttribute="leading" constant="131" id="fA6-Gf-e9A"/>
+                            <constraint firstItem="z7n-Aw-2Ej" firstAttribute="top" secondItem="kmD-6m-0gl" secondAttribute="bottom" constant="64" id="gef-Nr-Rbd"/>
+                            <constraint firstItem="Sf4-sL-VW3" firstAttribute="trailing" secondItem="kmD-6m-0gl" secondAttribute="trailing" constant="131" id="ncD-cx-WcZ"/>
+                            <constraint firstItem="Sf4-sL-VW3" firstAttribute="trailing" secondItem="z7n-Aw-2Ej" secondAttribute="trailing" constant="131" id="pLr-BS-Td7"/>
+                            <constraint firstItem="kmD-6m-0gl" firstAttribute="top" secondItem="Sf4-sL-VW3" secondAttribute="top" constant="128" id="ytb-Sl-Fey"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UWI-II-ZJV"/>
+                    <connections>
+                        <outlet property="userLogged" destination="kmD-6m-0gl" id="MxV-Nr-S7z"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logoutSegue" id="aBR-Fn-mdV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2o2-sD-ypH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2095.6521739130435" y="-274.55357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nkf-Rf-b6n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZcS-yf-gHW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d4z-gW-wU7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Blq-Pi-DDa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bRa-R4-Lqz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-88.405797101449281" y="-274.55357142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PSH-ER-ecQ"/>
+        <segue reference="aBR-Fn-mdV"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

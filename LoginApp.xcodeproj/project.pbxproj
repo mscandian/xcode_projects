@@ -15,6 +15,7 @@
 		9F2DBA442704EAA2007AB391 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F2DBA422704EAA2007AB391 /* LaunchScreen.storyboard */; };
 		9F2DBA4F2704EAA3007AB391 /* LoginAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2DBA4E2704EAA3007AB391 /* LoginAppTests.swift */; };
 		9F2DBA5A2704EAA3007AB391 /* LoginAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2DBA592704EAA3007AB391 /* LoginAppUITests.swift */; };
+		9F2DBA70270CCA8C007AB391 /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2DBA6F270CCA8B007AB391 /* SecondScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9F2DBA552704EAA3007AB391 /* LoginAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F2DBA592704EAA3007AB391 /* LoginAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAppUITests.swift; sourceTree = "<group>"; };
 		9F2DBA5B2704EAA3007AB391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F2DBA6F270CCA8B007AB391 /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				9F2DBA402704EAA2007AB391 /* Assets.xcassets */,
 				9F2DBA422704EAA2007AB391 /* LaunchScreen.storyboard */,
 				9F2DBA452704EAA2007AB391 /* Info.plist */,
+				9F2DBA6F270CCA8B007AB391 /* SecondScreen.swift */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F2DBA3C2704EA9A007AB391 /* ViewController.swift in Sources */,
+				9F2DBA70270CCA8C007AB391 /* SecondScreen.swift in Sources */,
 				9F2DBA382704EA9A007AB391 /* AppDelegate.swift in Sources */,
 				9F2DBA3A2704EA9A007AB391 /* SceneDelegate.swift in Sources */,
 			);
