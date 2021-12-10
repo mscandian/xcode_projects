@@ -30,13 +30,15 @@ class MovieDetailsViewController: UIViewController {
             self.movieBackdrop.alpha = 0.65
              }, completion: { (Bool) -> Void in    }
         )
-  
         
         movieBackdrop.contentMode = .scaleToFill
         
         textTitle.text = movie?.title
+        textTitle.font = UIFont.boldSystemFont(ofSize: 25.0)
         textOverview.text = movie?.overview
-        textRating.text = movie?.voteAverage?.description
+        var rate: String = ""
+        rate = (movie?.voteAverage?.description)!
+        textRating.text = "Avaliação: \(rate)"
         
     }
 }
